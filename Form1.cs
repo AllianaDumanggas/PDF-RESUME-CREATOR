@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace PDF_RESUME_CREATOR
 {
@@ -23,28 +25,11 @@ namespace PDF_RESUME_CREATOR
 
         }
 
+        
+        
         private void displaybttn_Click(object sender, EventArgs e)
         {
-            var myinfo = GetInfos();
-
-        }
-        public class Info
-        {
-            public string CompleteName { get; set; }
-            public byte Age { get; set; }
-            public string Birthday { get; set; }
-            public string Address { get; set; }
-            public string Profile { get; set; }
-            public List<string> Contact { get; set; }
-            public List<string> Skills { get; set; }
-            public List<string> Education { get; set; }
-            public List<string> Experience { get; set; }
-            public List<string> References { get; set; }
-
-        }
-        private Info GetInfos()
-        {
-            var info = new Info
+            Info mydata = new Info
             {
                 CompleteName = "Marites Chizmoza",
                 Age = 25,
@@ -86,10 +71,31 @@ namespace PDF_RESUME_CREATOR
                     "Juan Balita (Software Engineer at Techwix in New York)",
                     "Jose News (Resaturant and Hotel Manger at Micasa in Usa)",
                 }
-            };
-        
+            }; 
+            string strresultsjson = JsonConvert.SerializeObject(mydata);
+            File.WriteAllText( @"myinfos.json", strresultsjson);
+
+        }
+        public class Info
+        {
+            public string CompleteName { get; set; }
+            public byte Age { get; set; }
+            public string Birthday { get; set; }
+            public string Address { get; set; }
+            public string Profile { get; set; }
+            public List<string> Contact { get; set; }
+            public List<string> Skills { get; set; }
+            public List<string> Education { get; set; }
+            public List<string> Experience { get; set; }
+            public List<string> References { get; set; }
+
         }
          
+
+        private void readjdonfilebttn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

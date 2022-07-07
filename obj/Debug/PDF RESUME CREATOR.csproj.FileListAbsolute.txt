@@ -8,3 +8,6 @@ C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\
 C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF RESUME CREATOR.csproj.CoreCompileInputs.cache
 C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF RESUME CREATOR.exe
 C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF RESUME CREATOR.pdb
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\Newtonsoft.Json.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\Newtonsoft.Json.xml
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF RESUME CREATOR.csproj.CopyComplete
