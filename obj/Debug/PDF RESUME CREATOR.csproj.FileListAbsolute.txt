@@ -1,0 +1,10 @@
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\PDF RESUME CREATOR.exe.config
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\PDF RESUME CREATOR.exe
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\PDF RESUME CREATOR.pdb
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF RESUME CREATOR.csproj.AssemblyReference.cache
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF_RESUME_CREATOR.Form1.resources
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF_RESUME_CREATOR.Properties.Resources.resources
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF RESUME CREATOR.csproj.GenerateResource.cache
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF RESUME CREATOR.csproj.CoreCompileInputs.cache
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF RESUME CREATOR.exe
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF RESUME CREATOR.pdb
