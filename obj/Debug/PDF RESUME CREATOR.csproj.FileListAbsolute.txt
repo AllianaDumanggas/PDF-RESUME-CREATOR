@@ -2,7 +2,6 @@ C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\
 C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\PDF RESUME CREATOR.exe
 C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\PDF RESUME CREATOR.pdb
 C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF RESUME CREATOR.csproj.AssemblyReference.cache
-C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF_RESUME_CREATOR.Form1.resources
 C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF_RESUME_CREATOR.Properties.Resources.resources
 C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF RESUME CREATOR.csproj.GenerateResource.cache
 C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF RESUME CREATOR.csproj.CoreCompileInputs.cache
@@ -11,3 +10,29 @@ C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\
 C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\Newtonsoft.Json.dll
 C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\Newtonsoft.Json.xml
 C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF RESUME CREATOR.csproj.CopyComplete
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\OpenXmlPowerTools.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\SautinSoft.Document.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Buffers.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.IO.Packaging.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Management.Automation.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Memory.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Text.Json.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.ValueTuple.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\SautinSoft.Document.xml
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Buffers.xml
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Memory.xml
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Text.Json.xml
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.ValueTuple.xml
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF_RESUME_CREATOR.datainformation.resources

@@ -16,7 +16,7 @@ namespace PDF_RESUME_CREATOR
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new datainformation());
         }
     }
 }
