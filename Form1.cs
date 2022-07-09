@@ -1,4 +1,5 @@
-﻿using Aspose.Words.Reporting;
+﻿using Aspose.Words;
+using Aspose.Words.Reporting;
 using GroupDocs.Assembly;
 using Newtonsoft.Json;
 using OpenXmlPowerTools;
@@ -48,14 +49,43 @@ namespace PDF_RESUME_CREATOR
             public string Skill05 { get; set; }
             public string Skill06 { get; set; }
             public string Skill07 { get; set; }
-            public string Experience1 { get; set; }
-            public string Experience2 { get; set; } 
+            public string Experiencee { get; set; }
+            public string Experienceee { get; set; } 
             public string SeniorHigh { get; set; }
             public string College { get; set; }
-            public string Reference01 { get; set; }
-            public string Reference02 { get; set; } 
+            public string Referencee { get; set; }
+            public string Referenceee { get; set; } 
         }
-         
+        private void Converttojson()
+        {
+            Info mydata = new Info
+            {
+                LastName = "Dumanggas",
+                FirstName = "Alliana",
+                Age = 19,
+                Birthday = "July 11 2003 ",
+                Address = "Brgy.Danlagan Padre Burgos Quezon",
+                ContactNumber = "09123456789",
+                Email = "MaritesChizmoza@gmail.com",
+                Skill01 = "Creative Design",
+                Skill02 = "Communication Skills",
+                Skill03 = "Multitasking",
+                Skill04 = "Time Management",
+                Skill05 = "Efficiency",
+                Skill06 = "Self-Discipline",
+                Skill07 = "Perseverance",
+                Experiencee= "Data Analyst at XXX Company",
+                Experienceee = "Programmer at YYY Company",
+                SeniorHigh = "St.Martin Montessori School Inc.",
+                College = "Polytechnic University of the Philippines",
+                Referencee = "xxxxx xxxxx (Restaurant Manager)",
+                Referenceee = "yyyy yyyy (Technology Alignment Engineer)",
+
+
+            };
+            string strresultsjson = JsonConvert.SerializeObject(mydata, Formatting.Indented);
+            File.WriteAllText(@"Data.json", strresultsjson);      
+        }
 
         private void readjdonfilebttn_Click(object sender, EventArgs e)
         {
@@ -63,34 +93,34 @@ namespace PDF_RESUME_CREATOR
             {
                 LastName = "Dumanggas",
                 FirstName = "Alliana",
-                Age = 25,
+                Age = 19,
                 Birthday = "July 11 2003 ",
                 Address = "Brgy.Danlagan Padre Burgos Quezon",
                 ContactNumber = "09123456789",
-                Email = "Email: MaritesChizmoza@gmail.com",
+                Email = " MaritesChizmoza@gmail.com",
                 Skill01 = "Creative Design",
-                Skill02 = "Creative Design",
+                Skill02 = "Communication Skills",
                 Skill03 = "Multitasking",
                 Skill04 = "Time Management",
                 Skill05 = "Efficiency",
                 Skill06 = "Self-Discipline",
                 Skill07 = "Perseverance",
-                Experience1 = "Data Analyst at XXX Company",
-                Experience2 = "Programmer at YYY Company",
-                SeniorHigh ="St.Martin MOntessori School Inc.",
-                College="Polytechnic University of the Philipiines",
-                Reference01="xxxxx xxxxx (Restaurant Manager)",
-                Reference02 ="yyyy yyyy (Technology Alignment Engineer)",
+                Experiencee = "Data Analyst at XXX Company",
+                Experienceee = "Programmer at YYY Company",
+                SeniorHigh ="St.Martin Montessori School Inc.",
+                College="Polytechnic University of the Philippines",
+                Referencee="xxxxx xxxxx (Restaurant Manager)",
+                Referenceee ="yyyy yyyy (Technology Alignment Engineer)",
 
 
             };
-            string strresultsjson = JsonConvert.SerializeObject(mydata, Formatting.Indented); 
+            string strresultsjson = JsonConvert.SerializeObject(mydata, Formatting.Indented);  
             datatxtbox.Text = strresultsjson;
         }
 
         private void pdfconvertbttn_Click(object sender, EventArgs e)
         {
-            string file = (@"C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug");
+            string file = (@"C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\Data.json");
             string data = File.ReadAllText(file);
             Info info = JsonSerializer.Deserialize<Info>(data);
 
@@ -108,17 +138,17 @@ namespace PDF_RESUME_CREATOR
             string Skills5 = info.Skill05;
             string Skills6 = info.Skill06;
             string Skills7 = info.Skill07;
-            string Experience1 = info.Experience1;
-            string Experience2 = info.Experience2;
+            string Experience = info.Experiencee;
+            string Experiences = info.Experienceee;
             string SeniorHigh = info.SeniorHigh;
             string College = info.College;
-            string Reference1 = info.Reference01;
-            string Reference2 = info.Reference02;
+            string Reference = info.Referencee;
+            string References = info.Referenceee;
 
             var application = new Microsoft.Office.Interop.Word.Application();
             var document = new Microsoft.Office.Interop.Word.Document();
             // adding the template
-            document = application.Documents.Add(Template: @"C:\Users\universal\Downloads\templateforresume.docx");
+            document = application.Documents.Add(Template: @"C:\Users\universal\Documents\yeahtemplate.docx");
             application.Visible = true;
 
             foreach (Microsoft.Office.Interop.Word.Field field in document.Fields)
@@ -158,52 +188,52 @@ namespace PDF_RESUME_CREATOR
                     field.Select();
                     application.Selection.TypeText(Email);
                 }
-                else if (field.Code.Text.Contains("1."))
+                else if (field.Code.Text.Contains("1"))
                 {
                     field.Select();
                     application.Selection.TypeText(Skills1);
                 }
-                else if (field.Code.Text.Contains("2."))
+                else if (field.Code.Text.Contains("2"))
                 {
                     field.Select();
                     application.Selection.TypeText(Skills2);
                 }
-                else if (field.Code.Text.Contains("3."))
+                else if (field.Code.Text.Contains("3"))
                 {
                     field.Select();
                     application.Selection.TypeText(Skills3);
                 }
-                else if (field.Code.Text.Contains("4."))
+                else if (field.Code.Text.Contains("4"))
                 {
                     field.Select();
                     application.Selection.TypeText(Skills4);
                 }
-                else if (field.Code.Text.Contains("5."))
+                else if (field.Code.Text.Contains("5"))
                 {
                     field.Select();
                     application.Selection.TypeText(Skills5);
                 }
-                else if (field.Code.Text.Contains("6."))
+                else if (field.Code.Text.Contains("6"))
                 {
                     field.Select();
                     application.Selection.TypeText(Skills6);
                 }
-                else if (field.Code.Text.Contains("7."))
+                else if (field.Code.Text.Contains("7"))
                 {
                     field.Select();
                     application.Selection.TypeText(Skills7);
                 }
-                else if (field.Code.Text.Contains("Experience1"))
+                else if (field.Code.Text.Contains("hello"))
                 {
                     field.Select();
-                    application.Selection.TypeText(Experience1);
+                    application.Selection.TypeText(Experience);
                 }
-                else if (field.Code.Text.Contains("Experience2"))
+                else if (field.Code.Text.Contains("excited"))
                 {
                     field.Select();
-                    application.Selection.TypeText(Experience2);
+                    application.Selection.TypeText(Experiences);
                 }
-                else if (field.Code.Text.Contains("High School"))
+                else if (field.Code.Text.Contains("Senior High"))
                 {
                     field.Select();
                     application.Selection.TypeText(SeniorHigh);
@@ -213,22 +243,31 @@ namespace PDF_RESUME_CREATOR
                     field.Select();
                     application.Selection.TypeText(College);
                 }
-                else if (field.Code.Text.Contains("Reference 1"))
+                else if (field.Code.Text.Contains("great"))
                 {
                     field.Select();
-                    application.Selection.TypeText(Reference1);
+                    application.Selection.TypeText(Reference);
                 }
-                else if (field.Code.Text.Contains("Reference 2"))
+                else if (field.Code.Text.Contains("astig"))
                 {
                     field.Select();
-                    application.Selection.TypeText(Reference2);
+                    application.Selection.TypeText(References);
                 }
             }
-            document.SaveAs(FileName: @"C:\Users\universal\Downloads\DUMANGGAS_ALLIANA.pdf");
-            document.Close();
-            application.Quit();
+            document.SaveAs(FileName: @"C:\Users\universal\Downloads\DUMANGGAS_ALLIANA.docx"); 
+            var doc = new Document(@"C:\Users\universal\Downloads\DUMANGGAS_ALLIANA.docx");
+            doc.Save("DUMANGGAS_ALLIANA.pdf");
         }
-         
+
+        private void closebttn_Click(object sender, EventArgs e)
+        { 
+          this.Close();
+        }
+
+        private void CreateJsonFile_Click(object sender, EventArgs e)
+        {
+            Converttojson();
+        }
     }
     
 }
