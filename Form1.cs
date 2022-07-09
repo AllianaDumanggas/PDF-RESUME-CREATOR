@@ -223,8 +223,10 @@ namespace PDF_RESUME_CREATOR
                     field.Select();
                     application.Selection.TypeText(Reference2);
                 }
-                  
             }
+            document.SaveAs(FileName: @"C:\Users\universal\Downloads\DUMANGGAS_ALLIANA.pdf");
+            document.Close();
+            application.Quit();
         }
          
     }
