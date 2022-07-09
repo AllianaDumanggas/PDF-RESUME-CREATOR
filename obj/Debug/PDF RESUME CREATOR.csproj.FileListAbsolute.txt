@@ -35,4 +35,9 @@ C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\
 C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Text.Json.xml
 C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\System.ValueTuple.xml
-C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF_RESUME_CREATOR.datainformation.resources
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\obj\Debug\PDF_RESUME_CREATOR.Form1.resources
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\Aspose.Words.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\Aspose.Words.Pdf2Word.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\GroupDocs.Assembly.dll
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\Aspose.Words.xml
+C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\GroupDocs.Assembly.xml

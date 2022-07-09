@@ -2,7 +2,7 @@
 {
     internal class CustomMailMergeDataSource
     {
-        public CustomMailMergeDataSource(datainformation.Info info)
+        public CustomMailMergeDataSource(Form1.Info info)
         {
         }
     }

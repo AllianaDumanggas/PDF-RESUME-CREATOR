@@ -1,0 +1,1933 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>GroupDocs.Assembly</name>
+  </assembly>
+  <members>
+    <member name="T:GroupDocs.Assembly.BarcodeSettings">
+      <summary>
+            Represents a set of settings controlling barcode generation while assembling a document.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.BarcodeSettings.GraphicsUnit">
+      <summary>
+            Gets or sets a graphics unit used to measure <see cref="P:GroupDocs.Assembly.BarcodeSettings.BaseXDimension" /> and <see cref="P:GroupDocs.Assembly.BarcodeSettings.BaseYDimension" />.
+            The default value is <see cref="F:System.Drawing.GraphicsUnit.Millimeter" />.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.BarcodeSettings.BaseXDimension">
+      <summary>
+            Gets or sets a base x-dimension, that is, the smallest width of the unit of barcode bars and spaces.
+            Measured in <see cref="P:GroupDocs.Assembly.BarcodeSettings.GraphicsUnit" />.
+            </summary>
+      <remarks>
+            When barcode scaling is applied through a template, an actual x-dimension is calculated upon the base 
+            x-dimension and a scaling factor.
+            </remarks>
+    </member>
+    <member name="P:GroupDocs.Assembly.BarcodeSettings.BaseYDimension">
+      <summary>
+            Gets or sets a base y-dimension, that is, the smallest height of the unit of 2D barcode modules.
+            Measured in <see cref="P:GroupDocs.Assembly.BarcodeSettings.GraphicsUnit" />.
+            </summary>
+      <remarks>
+        <para>
+            Barcodes of some types (such as data matrix) may ignore an y-dimension and use an x-dimension for both 
+            width and height units.
+            </para>
+        <para>
+            When barcode scaling is applied through a template, an actual y-dimension is calculated upon the base 
+            y-dimension and a scaling factor.
+            </para>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Assembly.BarcodeSettings.Resolution">
+      <summary>
+            Gets or sets the horizontal and vertical resolution of a barcode image being generated. Measured in dots
+            per inch. The default value is 96.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.BarcodeSettings.XResolution">
+      <summary>
+            Gets or sets the horizontal resolution of a barcode image being generated. Measured in dots per inch.
+            The default value is 96.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.BarcodeSettings.YResolution">
+      <summary>
+            Gets or sets the vertical resolution of a barcode image being generated. Measured in dots per inch.
+            The default value is 96.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.BarcodeSettings.UseAutoCorrection">
+      <summary>
+            Gets or sets a value indicating whether an invalid barcode value should be corrected automatically 
+            (if possible) to fit the barcode's specification or an exception should be thrown to indicate the error. 
+            The default value is true.
+            </summary>
+      <remarks>
+            The auto-correction is not possible for Databar barcodes.
+            </remarks>
+    </member>
+    <member name="T:GroupDocs.Assembly.DataSourceInfo">
+      <summary>
+            Provides information on a single data source object to be used to assemble a document from a template.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Assembly.DataSourceInfo.#ctor">
+      <summary>
+            Creates a new instance of this class without any properties specified.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Assembly.DataSourceInfo.#ctor(System.Object)">
+      <summary>
+            Creates a new instance of this class with the data source object specified.
+            </summary>
+      <remarks>
+        <para>
+            The data source object can be of one of the following types:
+            </para>
+        <list type="bullet">
+          <item>
+            <see cref="T:GroupDocs.Assembly.Data.XmlDataSource" />
+          </item>
+          <item>
+            <see cref="T:GroupDocs.Assembly.Data.JsonDataSource" />
+          </item>
+          <item>
+            <see cref="T:GroupDocs.Assembly.Data.CsvDataSource" />
+          </item>
+          <item>
+            <see cref="T:GroupDocs.Assembly.Data.DocumentTableSet" />
+          </item>
+          <item>
+            <see cref="T:GroupDocs.Assembly.Data.DocumentTable" />
+          </item>
+          <item>
+            <see cref="T:System.Data.DataSet" />
+          </item>
+          <item>
+            <see cref="T:System.Data.DataTable" />
+          </item>
+          <item>
+            <see cref="T:System.Data.DataRow" />
+          </item>
+          <item>
+            <see cref="T:System.Data.IDataReader" />
+          </item>
+          <item>
+            <see cref="T:System.Data.IDataRecord" />
+          </item>
+          <item>
+            <see cref="T:System.Data.DataView" />
+          </item>
+          <item>
+            <see cref="T:System.Data.DataRowView" />
+          </item>
+          <item>
+            Any other arbitrary non-dynamic and non-anonymous .NET type
+            </item>
+        </list>
+        <para>
+            For information on how to work with data sources of different types in template documents, see template syntax reference 
+            (https://docs.groupdocs.com/display/assemblynet/Template+Syntax+-+Part+1+of+2#TemplateSyntax-Part1of2-UsingDataSources).
+            </para>
+      </remarks>
+      <param name="dataSource">The data source object.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.DataSourceInfo.#ctor(System.Object,System.String)">
+      <summary>
+            Creates a new instance of this class with the data source object and its name specified.
+            </summary>
+      <remarks>
+        <para>
+            The data source object can be of one of the following types:
+            </para>
+        <list type="bullet">
+          <item>
+            <see cref="T:GroupDocs.Assembly.Data.XmlDataSource" />
+          </item>
+          <item>
+            <see cref="T:GroupDocs.Assembly.Data.JsonDataSource" />
+          </item>
+          <item>
+            <see cref="T:GroupDocs.Assembly.Data.CsvDataSource" />
+          </item>
+          <item>
+            <see cref="T:GroupDocs.Assembly.Data.DocumentTableSet" />
+          </item>
+          <item>
+            <see cref="T:GroupDocs.Assembly.Data.DocumentTable" />
+          </item>
+          <item>
+            <see cref="T:System.Data.DataSet" />
+          </item>
+          <item>
+            <see cref="T:System.Data.DataTable" />
+          </item>
+          <item>
+            <see cref="T:System.Data.DataRow" />
+          </item>
+          <item>
+            <see cref="T:System.Data.IDataReader" />
+          </item>
+          <item>
+            <see cref="T:System.Data.IDataRecord" />
+          </item>
+          <item>
+            <see cref="T:System.Data.DataView" />
+          </item>
+          <item>
+            <see cref="T:System.Data.DataRowView" />
+          </item>
+          <item>
+            Any other arbitrary non-dynamic and non-anonymous .NET type
+            </item>
+        </list>
+        <para>
+            For information on how to work with data sources of different types in template documents, see template syntax reference 
+            (https://docs.groupdocs.com/display/assemblynet/Template+Syntax+-+Part+1+of+2#TemplateSyntax-Part1of2-UsingDataSources).
+            </para>
+        <para>
+            When the name of the data source object is specified, you can access the data source object and its members 
+            in a template document using the name.
+            </para>
+        <para>
+            When the name of the data source object is null or empty, you can still access members of the data source object 
+            in a template document using context object member access (see Template Syntax Reference for more information), 
+            but you cannot access the data source object itself.
+            </para>
+        <para>
+            When passing multiple <see cref="T:GroupDocs.Assembly.DataSourceInfo" /> instances to <see cref="T:GroupDocs.Assembly.DocumentAssembler" />, only the name of
+            the first data source object can be null or empty. Names of the rest ones must be specified and unique.
+            </para>
+      </remarks>
+      <param name="dataSource">
+            The data source object.
+            </param>
+      <param name="name">
+            The name of the data source object to be used to access the data source object in a template document.
+            </param>
+    </member>
+    <member name="P:GroupDocs.Assembly.DataSourceInfo.DataSource">
+      <summary>
+            Gets or sets the data source object.
+            </summary>
+      <remarks>
+        <para>
+            The data source object can be of one of the following types:
+            </para>
+        <list type="bullet">
+          <item>
+            <see cref="T:GroupDocs.Assembly.Data.XmlDataSource" />
+          </item>
+          <item>
+            <see cref="T:GroupDocs.Assembly.Data.JsonDataSource" />
+          </item>
+          <item>
+            <see cref="T:GroupDocs.Assembly.Data.CsvDataSource" />
+          </item>
+          <item>
+            <see cref="T:GroupDocs.Assembly.Data.DocumentTableSet" />
+          </item>
+          <item>
+            <see cref="T:GroupDocs.Assembly.Data.DocumentTable" />
+          </item>
+          <item>
+            <see cref="T:System.Data.DataSet" />
+          </item>
+          <item>
+            <see cref="T:System.Data.DataTable" />
+          </item>
+          <item>
+            <see cref="T:System.Data.DataRow" />
+          </item>
+          <item>
+            <see cref="T:System.Data.IDataReader" />
+          </item>
+          <item>
+            <see cref="T:System.Data.IDataRecord" />
+          </item>
+          <item>
+            <see cref="T:System.Data.DataView" />
+          </item>
+          <item>
+            <see cref="T:System.Data.DataRowView" />
+          </item>
+          <item>
+            Any other arbitrary non-dynamic and non-anonymous .NET type
+            </item>
+        </list>
+        <para>
+            For information on how to work with data sources of different types in template documents, see template syntax reference 
+            (https://docs.groupdocs.com/display/assemblynet/Template+Syntax+-+Part+1+of+2#TemplateSyntax-Part1of2-UsingDataSources).
+            </para>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Assembly.DataSourceInfo.Name">
+      <summary>
+            Gets or sets the name of the data source object to be used to access the data source object in a template document.
+            </summary>
+      <remarks>
+        <para>
+            When the name of the data source object is specified, you can access the data source object and its members 
+            in a template document using the name.
+            </para>
+        <para>
+            When the name of the data source object is null or empty, you can still access members of the data source object 
+            in a template document using context object member access (see Template Syntax Reference for more information), 
+            but you cannot access the data source object itself.
+            </para>
+        <para>
+            When passing multiple <see cref="T:GroupDocs.Assembly.DataSourceInfo" /> instances to <see cref="T:GroupDocs.Assembly.DocumentAssembler" />, only the name of
+            the first data source object can be null or empty. Names of the rest ones must be specified and unique.
+            </para>
+      </remarks>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.CsvDataLoadOptions">
+      <summary>
+            Represents options for parsing CSV data.
+            </summary>
+      <remarks>
+            An instance of this class can be passed into constructors of <see cref="T:GroupDocs.Assembly.Data.CsvDataSource" />.
+            </remarks>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.CsvDataLoadOptions.#ctor">
+      <summary>
+            Initializes a new instance of this class with default options.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.CsvDataLoadOptions.#ctor(System.Boolean)">
+      <summary>
+            Initializes a new instance of this class with specifying whether CSV data contains column names
+            at the first line.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.CsvDataLoadOptions.HasHeaders">
+      <summary>
+            Gets or sets a value indicating whether the first line of CSV data contains column names.
+            </summary>
+      <remarks>
+            The default value is <b>false</b>.
+            </remarks>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.CsvDataLoadOptions.Delimiter">
+      <summary>
+            Gets or sets the character to be used as a column delimiter.
+            </summary>
+      <remarks>
+            The default value is ',' (comma).
+            </remarks>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.CsvDataLoadOptions.QuoteChar">
+      <summary>
+            Gets or sets the character that is used to quote field values.
+            </summary>
+      <remarks>
+        <para>The default value is '"' (quotation mark).</para>
+        <para>Double the character to place it into quoted text.</para>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.CsvDataLoadOptions.CommentChar">
+      <summary>
+            Gets or sets the character that is used to comment lines of CSV data.
+            </summary>
+      <remarks>
+            The default value is '#' (number sign).
+            </remarks>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.CsvDataSource">
+      <summary>
+            Provides access to data of a CSV file or stream to be used while assembling a document.
+            </summary>
+      <remarks>
+        <para>
+            To access data of the corresponding file or stream while assembling a document, pass an instance of this class as
+            a data source to one of <see cref="T:GroupDocs.Assembly.DocumentAssembler" />.AssembleDocument 
+            overloads.
+            </para>
+        <para>
+            In template documents, a <see cref="T:GroupDocs.Assembly.Data.CsvDataSource" /> instance should be treated in the same way as if it was
+            a <see cref="T:System.Data.DataTable" /> instance. For more information, see template syntax reference 
+            (https://docs.groupdocs.com/display/assemblynet/Template+Syntax+-+Part+1+of+2#TemplateSyntax-Part1of2-UsingDataSources).
+            </para>
+        <para>
+            Data types of comma-separated values are determined automatically upon their string representations. So in template
+            documents, you can work with typed values rather than just strings. The engine is capable to automatically recognize 
+            values of the following types:
+            </para>
+        <list type="bullet">
+          <item>
+            <see cref="T:System.Nullable`1" />
+          </item>
+          <item>
+            <see cref="T:System.Nullable`1" />
+          </item>
+          <item>
+            <see cref="T:System.Nullable`1" />
+          </item>
+          <item>
+            <see cref="T:System.Nullable`1" />
+          </item>
+          <item>
+            <see cref="T:System.String" />
+          </item>
+        </list>
+        <para>
+            Note that for automatic recognition of data types to work, string representations of comma-separated values should 
+            be formed using invariant culture settings.
+            </para>
+        <para>
+            To override default behavior of CSV data loading, initialize and pass a <see cref="T:GroupDocs.Assembly.Data.CsvDataLoadOptions" /> instance
+            to a constructor of this class.
+            </para>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.CsvDataSource.#ctor(System.String)">
+      <summary>
+            Creates a new data source with data from a CSV file using default options for parsing CSV data.
+            </summary>
+      <param name="csvPath">The path to the CSV file to be used as the data source.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.CsvDataSource.#ctor(System.String,GroupDocs.Assembly.Data.CsvDataLoadOptions)">
+      <summary>
+            Creates a new data source with data from a CSV file using the specified options for parsing CSV data.
+            </summary>
+      <param name="csvPath">The path to the CSV file to be used as the data source.</param>
+      <param name="options">Options for parsing the CSV data.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.CsvDataSource.#ctor(System.IO.Stream)">
+      <summary>
+            Creates a new data source with data from a CSV stream using default options for parsing CSV data.
+            </summary>
+      <param name="csvStream">The stream of CSV data to be used as the data source.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.CsvDataSource.#ctor(System.IO.Stream,GroupDocs.Assembly.Data.CsvDataLoadOptions)">
+      <summary>
+            Creates a new data source with data from a CSV stream using the specified options for parsing CSV data.
+            </summary>
+      <param name="csvStream">The stream of CSV data to be used as the data source.</param>
+      <param name="options">Options for parsing the CSV data.</param>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.DocumentTable">
+      <summary>
+            Provides access to data of a single table (or spreadsheet) located in an external document to be used while 
+            assembling a document.
+            </summary>
+      <remarks>
+        <para>
+            For documents of Spreadsheet file formats, a <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> instance represents a single sheet.
+            For documents of other file formats, a <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> instance represents a single table.
+            </para>
+        <para>
+            To access data of the corresponding table while assembling a document, pass an instance of this class as 
+            a data source to one of <see cref="T:GroupDocs.Assembly.DocumentAssembler" />.AssembleDocument
+            overloads.
+            </para>
+        <para>
+            In template documents, a <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> instance should be treated in the same way as if it was
+            a <see cref="T:System.Data.DataTable" /> instance. See template syntax reference for more information.
+            </para>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTable.#ctor(System.String,System.Int32)">
+      <summary>
+            Creates a new instance of this class using default <see cref="T:GroupDocs.Assembly.Data.DocumentTableOptions" />.
+            </summary>
+      <param name="documentPath">The path to a document containing the table to be accessed.</param>
+      <param name="indexInDocument">The zero-based index of the table in the document.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTable.#ctor(System.String,System.Int32,GroupDocs.Assembly.Data.DocumentTableOptions)">
+      <summary>
+            Creates a new instance of this class.
+            </summary>
+      <param name="documentPath">The path to a document containing the table to be accessed.</param>
+      <param name="indexInDocument">The zero-based index of the table in the document.</param>
+      <param name="options">
+            A set of options controlling extraction of data from the table. If null, default options are applied.
+            </param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTable.#ctor(System.IO.Stream,System.Int32)">
+      <summary>
+            Creates a new instance of this class using default <see cref="T:GroupDocs.Assembly.Data.DocumentTableOptions" />.
+            </summary>
+      <param name="documentStream">The stream containing a document with the table to be accessed.</param>
+      <param name="indexInDocument">The zero-based index of the table in the document.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTable.#ctor(System.IO.Stream,System.Int32,GroupDocs.Assembly.Data.DocumentTableOptions)">
+      <summary>
+            Creates a new instance of this class.
+            </summary>
+      <param name="documentStream">The stream containing a document with the table to be accessed.</param>
+      <param name="indexInDocument">The zero-based index of the table in the document.</param>
+      <param name="options">
+            A set of options controlling extraction of data from the table. If null, default options are applied.
+            </param>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTable.Name">
+      <summary>
+            Gets or sets the name of this table used to access the table's data in a template document passed to
+            <see cref="T:GroupDocs.Assembly.DocumentAssembler" />.
+            </summary>
+      <remarks>
+        <para>
+            If the table's name is read from a document, the name is automatically corrected so that it to be valid. 
+            However, if the table's name is set manually through this property and the name is invalid, an exception is thrown.
+            </para>
+        <para>
+            The table's name is considered to be valid, if the following conditions are met:
+            </para>
+        <list type="bullet">
+          <item>
+            The name is not empty.
+            </item>
+          <item>
+            The name's first character is a letter or underscore.
+            </item>
+          <item>
+            The rest of the name's characters are letters, underscores, digits, or the following characters: '@', '#', '$'.
+            </item>
+          <item>
+            The corresponding <see cref="T:GroupDocs.Assembly.Data.DocumentTableSet" /> object does not contain a <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> instance 
+            with the same name.
+            </item>
+        </list>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTable.IndexInDocument">
+      <summary>
+            Gets the original zero-based index of the corresponding table as per the source document.
+            </summary>
+      <remarks>
+            Depending on an <see cref="T:GroupDocs.Assembly.Data.IDocumentTableLoadHandler" /> implementation provided, this index may differ from 
+            the index of this <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> instance within the table collection of the corresponding 
+            <see cref="T:GroupDocs.Assembly.Data.DocumentTableSet" /> instance, if any.
+            </remarks>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTable.Columns">
+      <summary>
+            Gets the collection of <see cref="T:GroupDocs.Assembly.Data.DocumentTableColumn" /> objects representing columns of 
+            the corresponding table.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.DocumentTableCollection">
+      <summary>
+            Represents a read-only collection of <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> objects of a particular <see cref="T:GroupDocs.Assembly.Data.DocumentTableSet" /> 
+            instance.
+            </summary>
+      <remarks>
+            The collection is filled automatically while loading the corresponding tables from a document and can not be modified.
+            However, properties of <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> objects contained within the collection can be modified.
+            </remarks>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableCollection.GetEnumerator">
+      <summary>
+            Returns an enumerator to iterate <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> objects of this collection.
+            </summary>
+      <returns>
+            An enumerator to iterate <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> objects of this collection.
+            </returns>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableCollection.Contains(System.String)">
+      <summary>
+            Returns a value indicating whether this collection contains a table with the specified name.
+            </summary>
+      <param name="name">The case-insensitive name of a table to look for.</param>
+      <returns>A value indicating whether this collection contains a table with the specified name.</returns>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableCollection.Contains(GroupDocs.Assembly.Data.DocumentTable)">
+      <summary>
+            Returns a value indicating whether this collection contains the specified table.
+            </summary>
+      <param name="table">A table to look for.</param>
+      <returns>A value indicating whether this collection contains the specified table.</returns>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableCollection.IndexOf(System.String)">
+      <summary>
+            Returns the index of a table with the specified name within this collection.
+            </summary>
+      <param name="name">The case-insensitive name of a table to find.</param>
+      <returns>
+            The zero-based index of a table with the specified name, or -1 if the table does not exist in this collection.
+            </returns>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableCollection.IndexOf(GroupDocs.Assembly.Data.DocumentTable)">
+      <summary>
+            Returns the index of the specified table within this collection.
+            </summary>
+      <param name="table">A table to find.</param>
+      <returns>
+            The zero-based index of the specified table, or -1 if the table does not exist in this collection.
+            </returns>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableCollection.Item(System.Int32)">
+      <summary>
+            Gets a <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> instance from the collection at the specified index.
+            </summary>
+      <param name="index">The zero-based index of the table to return.</param>
+      <returns>A <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> instance from the collection at the specified index.</returns>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableCollection.Item(System.String)">
+      <summary>
+            Gets a <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> instance with the specified name from the collection.
+            </summary>
+      <param name="name">The case-insensitive name of the table to return.</param>
+      <returns>
+            A <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> instance with the specified name from the collection or null
+            if such an instance does not exist.
+            </returns>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableCollection.Count">
+      <summary>
+            Gets the total number of <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> objects in the collection.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.DocumentTableColumn">
+      <summary>
+            Represents a single column of a particular <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> object.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableColumn.Name">
+      <summary>
+            Gets or sets the name of this column used to access the column's data in a template document passed to
+            <see cref="T:GroupDocs.Assembly.DocumentAssembler" />.
+            </summary>
+      <remarks>
+        <para>
+            If the column's name is read from a document (see <see cref="P:GroupDocs.Assembly.Data.DocumentTableOptions.FirstRowContainsColumnNames" />),
+            the name is automatically corrected so that it to be valid. However, if the column's name is set manually through
+            this property and the name is invalid, an exception is thrown.
+            </para>
+        <para>
+            The column's name is considered to be valid, if the following conditions are met:
+            </para>
+        <list type="bullet">
+          <item>
+            The name is not empty.
+            </item>
+          <item>
+            The name's first character is a letter or underscore.
+            </item>
+          <item>
+            The rest of the name's characters are letters, underscores, digits, or the following characters: '@', '#', '$'.
+            </item>
+          <item>
+            The corresponding <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> object does not contain a <see cref="T:GroupDocs.Assembly.Data.DocumentTableColumn" /> instance 
+            with the same name.
+            </item>
+        </list>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableColumn.IndexInDocument">
+      <summary>
+            Gets the original zero-based index of the corresponding table column as per the source document.
+            </summary>
+      <remarks>
+            Depending on <see cref="T:GroupDocs.Assembly.Data.DocumentTableOptions" /> specified, this index may differ from the index of 
+            this <see cref="T:GroupDocs.Assembly.Data.DocumentTableColumn" /> instance within the column collection of the corresponding 
+            <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> instance.
+            </remarks>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableColumn.Type">
+      <summary>
+            Gets or sets the type of cell values in this column.
+            </summary>
+      <remarks>
+        <para>
+            For documents of non-Spreadsheet file formats, the initial type is always automatically determined 
+            as string. For documents of Spreadsheet file formats, the initial type is automatically determined 
+            depending on corresponding cell values.
+            </para>
+        <para>
+            If cells of a particular Spreadsheet column contain values of different types, then the column's 
+            initial type is also automatically determined as string.
+            </para>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableColumn.AllowsNull">
+      <summary>
+            Gets a value indicating whether cells in this column contain null values or not.
+            </summary>
+      <remarks>
+            Undefined and error values in cells of Spreadsheet documents are also considered to be null.
+            </remarks>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.DocumentTableColumnCollection">
+      <summary>
+            Represents a read-only collection of <see cref="T:GroupDocs.Assembly.Data.DocumentTableColumn" /> objects of a particular 
+            <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> instance.
+            </summary>
+      <remarks>
+            The collection is filled automatically while loading the corresponding table from a document and can not be modified.
+            However, properties of <see cref="T:GroupDocs.Assembly.Data.DocumentTableColumn" /> objects contained within the collection can be modified.
+            </remarks>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableColumnCollection.GetEnumerator">
+      <summary>
+            Returns an enumerator to iterate <see cref="T:GroupDocs.Assembly.Data.DocumentTableColumn" /> objects of this collection.
+            </summary>
+      <returns>
+            An enumerator to iterate <see cref="T:GroupDocs.Assembly.Data.DocumentTableColumn" /> objects of this collection.
+            </returns>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableColumnCollection.Contains(System.String)">
+      <summary>
+            Returns a value indicating whether this collection contains a column with the specified name.
+            </summary>
+      <param name="name">The case-insensitive name of a column to look for.</param>
+      <returns>A value indicating whether this collection contains a column with the specified name.</returns>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableColumnCollection.Contains(GroupDocs.Assembly.Data.DocumentTableColumn)">
+      <summary>
+            Returns a value indicating whether this collection contains the specified column.
+            </summary>
+      <param name="column">A column to look for.</param>
+      <returns>A value indicating whether this collection contains the specified column.</returns>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableColumnCollection.IndexOf(System.String)">
+      <summary>
+            Returns the index of a column with the specified name within this collection.
+            </summary>
+      <param name="name">The case-insensitive name of a column to find.</param>
+      <returns>
+            The zero-based index of a column with the specified name, or -1 if the column does not exist in this collection.
+            </returns>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableColumnCollection.IndexOf(GroupDocs.Assembly.Data.DocumentTableColumn)">
+      <summary>
+            Returns the index of the specified column within this collection.
+            </summary>
+      <param name="column">A column to find.</param>
+      <returns>
+            The zero-based index of the specified column, or -1 if the column does not exist in this collection.
+            </returns>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableColumnCollection.Item(System.Int32)">
+      <summary>
+            Gets a <see cref="T:GroupDocs.Assembly.Data.DocumentTableColumn" /> instance from the collection at the specified index.
+            </summary>
+      <param name="index">The zero-based index of the column to return.</param>
+      <returns>A <see cref="T:GroupDocs.Assembly.Data.DocumentTableColumn" /> instance from the collection at the specified index.</returns>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableColumnCollection.Item(System.String)">
+      <summary>
+            Gets a <see cref="T:GroupDocs.Assembly.Data.DocumentTableColumn" /> instance with the specified name from the collection.
+            </summary>
+      <param name="name">The case-insensitive name of the column to return.</param>
+      <returns>
+            A <see cref="T:GroupDocs.Assembly.Data.DocumentTableColumn" /> instance with the specified name from the collection or null
+            if such an instance does not exist.
+            </returns>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableColumnCollection.Count">
+      <summary>
+            Gets the total number of <see cref="T:GroupDocs.Assembly.Data.DocumentTableColumn" /> objects in the collection.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.DocumentTableLoadArgs">
+      <summary>
+            Provides data for the <see cref="M:GroupDocs.Assembly.Data.IDocumentTableLoadHandler.Handle(GroupDocs.Assembly.Data.DocumentTableLoadArgs)" /> method.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableLoadArgs.TableIndex">
+      <summary>
+            Gets the zero-based index of the corresponding document table to be loaded.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableLoadArgs.IsLoaded">
+      <summary>
+            Gets or sets a value indicating whether the corresponding document table is to be loaded or not.
+            The default value is true.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableLoadArgs.Options">
+      <summary>
+            Gets or sets <see cref="T:GroupDocs.Assembly.Data.DocumentTableOptions" /> to be used while loading the corresponding document table.
+            The default value is null, which means that default <see cref="T:GroupDocs.Assembly.Data.DocumentTableOptions" /> are to be applied.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.DocumentTableOptions">
+      <summary>
+            Provides a set of options to control extraction of data from a document table.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableOptions.#ctor">
+      <summary>
+            Creates a new instance of this class.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableOptions.MinRowIndex">
+      <summary>
+            Gets or sets the smallest zero-based index of a row to be extracted from a document table.
+            The default value is negative which means that the smallest row index is not limited.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableOptions.MaxRowIndex">
+      <summary>
+            Gets or sets the largest zero-based index of a row to be extracted from a document table.
+            The default value is negative which means that the largest row index is not limited.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableOptions.MinColumnIndex">
+      <summary>
+            Gets or sets the smallest zero-based index of a column to be extracted from a document table.
+            The default value is negative which means that the smallest column index is not limited.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableOptions.MaxColumnIndex">
+      <summary>
+            Gets or sets the largest zero-based index of a column to be extracted from a document table.
+            The default value is negative which means that the largest column index is not limited.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableOptions.FirstRowContainsColumnNames">
+      <summary>
+            Gets or sets a value indicating whether column names are to be obtained from the first
+            extracted row of a document table. The default value is false.
+            </summary>
+      <remarks>
+            If column names are not set to be obtained from the first extracted row of a document table, 
+            default column names are used instead. For documents of Spreadsheet file formats, default 
+            column names are defined as A, B, C, ... Z, AA, AB, and so on. For documents of other 
+            file formats, default column names are defined as Column1, Column2, Column3, and so on.
+            </remarks>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.DocumentTableRelation">
+      <summary>
+            Represents a parent-child relationship between two <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> objects.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableRelation.ParentColumn">
+      <summary>
+            Gets the parent column of this relation.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableRelation.ChildColumn">
+      <summary>
+            Gets the child column of this relation.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.DocumentTableRelationCollection">
+      <summary>
+            Represents the collection of <see cref="T:GroupDocs.Assembly.Data.DocumentTableRelation" /> objects of a single <see cref="T:GroupDocs.Assembly.Data.DocumentTableSet" /> 
+            instance.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableRelationCollection.Add(GroupDocs.Assembly.Data.DocumentTableColumn,GroupDocs.Assembly.Data.DocumentTableColumn)">
+      <summary>
+            Creates a <see cref="T:GroupDocs.Assembly.Data.DocumentTableRelation" /> object for the specified parent and child columns, and adds it 
+            to the collection.
+            </summary>
+      <param name="parentColumn">The parent column of the relation.</param>
+      <param name="childColumn">The child column of the relation.</param>
+      <returns>The created relation.</returns>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableRelationCollection.Remove(GroupDocs.Assembly.Data.DocumentTableRelation)">
+      <summary>
+            Removes the specified relation from the collection.
+            </summary>
+      <param name="relation">The relation to remove.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableRelationCollection.RemoveAt(System.Int32)">
+      <summary>
+            Removes the relation at the specified index from the collection.
+            </summary>
+      <param name="index">The index of the relation to remove.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableRelationCollection.Clear">
+      <summary>
+            Clears the collection of any relations.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableRelationCollection.GetEnumerator">
+      <summary>
+            Returns an enumerator to iterate <see cref="T:GroupDocs.Assembly.Data.DocumentTableRelation" /> objects of this collection.
+            </summary>
+      <returns>
+            An enumerator to iterate <see cref="T:GroupDocs.Assembly.Data.DocumentTableRelation" /> objects of this collection.
+            </returns>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableRelationCollection.Contains(GroupDocs.Assembly.Data.DocumentTableRelation)">
+      <summary>
+            Returns a value indicating whether this collection contains the specified relation.
+            </summary>
+      <param name="relation">A relation to look for.</param>
+      <returns>A value indicating whether this collection contains the specified relation.</returns>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableRelationCollection.IndexOf(GroupDocs.Assembly.Data.DocumentTableRelation)">
+      <summary>
+            Returns the index of the specified relation within this collection.
+            </summary>
+      <param name="relation">A relation to find.</param>
+      <returns>
+            The zero-based index of the specified relation, or -1 if the relation does not exist in this collection.
+            </returns>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableRelationCollection.Item(System.Int32)">
+      <summary>
+            Gets a <see cref="T:GroupDocs.Assembly.Data.DocumentTableRelation" /> instance from the collection at the specified index.
+            </summary>
+      <param name="index">The zero-based index of the relation to return.</param>
+      <returns>A <see cref="T:GroupDocs.Assembly.Data.DocumentTableRelation" /> instance from the collection at the specified index.</returns>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableRelationCollection.Count">
+      <summary>
+            Gets the total number of <see cref="T:GroupDocs.Assembly.Data.DocumentTableRelation" /> objects in the collection.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.DocumentTableSet">
+      <summary>
+            Provides access to data of multiple tables (or spreadsheets) located in an external document to be used while 
+            assembling a document. Also, enables to define parent-child relations for the document tables thus simplifying
+            access to related data within template documents.
+            </summary>
+      <remarks>
+        <para>
+            For documents of Spreadsheet file formats, a <see cref="T:GroupDocs.Assembly.Data.DocumentTableSet" /> instance represents a set of sheets.
+            For documents of other file formats, a <see cref="T:GroupDocs.Assembly.Data.DocumentTableSet" /> instance represents a set of tables.
+            </para>
+        <para>
+            To access data of the corresponding tables while assembling a document, pass an instance of this class as 
+            a data source to one of <see cref="T:GroupDocs.Assembly.DocumentAssembler" />.AssembleDocument
+            overloads.
+            </para>
+        <para>
+            In template documents, a <see cref="T:GroupDocs.Assembly.Data.DocumentTableSet" /> instance should be treated in the same way as if it was
+            a <see cref="T:System.Data.DataSet" /> instance. See template syntax reference for more information.
+            </para>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableSet.#ctor(System.String)">
+      <summary>
+            Creates a new instance of this class loading all tables from a document using default 
+            <see cref="T:GroupDocs.Assembly.Data.DocumentTableOptions" />.
+            </summary>
+      <param name="documentPath">The path to a document containing tables to be accessed.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableSet.#ctor(System.String,GroupDocs.Assembly.Data.IDocumentTableLoadHandler)">
+      <summary>
+            Creates a new instance of this class.
+            </summary>
+      <param name="documentPath">The path to a document containing tables to be accessed.</param>
+      <param name="loadHandler">
+            An <see cref="T:GroupDocs.Assembly.Data.IDocumentTableLoadHandler" /> implementation controlling how document tables are loaded.
+            </param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableSet.#ctor(System.IO.Stream)">
+      <summary>
+            Creates a new instance of this class loading all tables from a document using default 
+            <see cref="T:GroupDocs.Assembly.Data.DocumentTableOptions" />.
+            </summary>
+      <param name="documentStream">The stream containing a document with tables to be accessed.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.DocumentTableSet.#ctor(System.IO.Stream,GroupDocs.Assembly.Data.IDocumentTableLoadHandler)">
+      <summary>
+            Creates a new instance of this class.
+            </summary>
+      <param name="documentStream">The stream containing a document with tables to be accessed.</param>
+      <param name="loadHandler">
+            An <see cref="T:GroupDocs.Assembly.Data.IDocumentTableLoadHandler" /> implementation controlling how document tables are loaded.
+            </param>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableSet.Tables">
+      <summary>
+            Gets the collection of <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> objects representing tables of this set.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.DocumentTableSet.Relations">
+      <summary>
+            Gets the collection of parent-child relations defined for document tables of this set.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.IDocumentTableLoadHandler">
+      <summary>
+            Overrides default loading of <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> objects while creating a <see cref="T:GroupDocs.Assembly.Data.DocumentTableSet" /> 
+            instance.
+            </summary>
+      <remarks>
+            Implement this interface if you want to discard loading of specific <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> objects or provide 
+            specific <see cref="T:GroupDocs.Assembly.Data.DocumentTableOptions" /> for document tables being loaded.
+            </remarks>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.IDocumentTableLoadHandler.Handle(GroupDocs.Assembly.Data.DocumentTableLoadArgs)">
+      <summary>
+            Overrides default loading of a particular <see cref="T:GroupDocs.Assembly.Data.DocumentTable" /> object while creating 
+            a <see cref="T:GroupDocs.Assembly.Data.DocumentTableSet" /> instance.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.JsonDataLoadOptions">
+      <summary>
+            Represents options for parsing JSON data.
+            </summary>
+      <remarks>
+            An instance of this class can be passed into constructors of <see cref="T:GroupDocs.Assembly.Data.JsonDataSource" />.
+            </remarks>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.JsonDataLoadOptions.#ctor">
+      <summary>
+            Initializes a new instance of this class with default options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.JsonDataLoadOptions.SimpleValueParseMode">
+      <summary>
+            Gets or sets a mode for parsing JSON simple values (null, boolean, number, integer, and string) 
+            while loading JSON. Such a mode does not affect parsing of date-time values. The default is 
+            <see cref="F:GroupDocs.Assembly.Data.JsonSimpleValueParseMode.Loose" />.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.JsonDataLoadOptions.ExactDateTimeParseFormat">
+      <summary>
+            Gets or sets an exact format for parsing JSON date-time values while loading JSON. The default is <b>null</b>.
+            </summary>
+      <remarks>
+        <para>
+            Strings encoded using Microsoft® JSON date-time format (for example, "/Date(1224043200000)/") are always 
+            recognized as date-time values regardless of a value of this property. The property defines additional 
+            formats to be used while parsing date-time values from strings in the following way:
+            </para>
+        <list type="bullet">
+          <item>
+            When <see cref="P:GroupDocs.Assembly.Data.JsonDataLoadOptions.ExactDateTimeParseFormat" /> is <b>null</b>, the ISO-8601 format and all date-time formats 
+            supported for the current, English USA, and English New Zealand cultures are used additionally in 
+            the mentioned order.
+            </item>
+          <item>
+            When <see cref="P:GroupDocs.Assembly.Data.JsonDataLoadOptions.ExactDateTimeParseFormat" /> is a non-empty string, it is used as a single additional 
+            date-time format utilizing the current culture.
+            </item>
+          <item>
+            When <see cref="P:GroupDocs.Assembly.Data.JsonDataLoadOptions.ExactDateTimeParseFormat" /> is an empty string, no additional date-time formats are used.
+            </item>
+        </list>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.JsonDataLoadOptions.ExactDateTimeParseFormats">
+      <summary>
+            Gets or sets exact formats for parsing JSON date-time values while loading JSON. The default is <b>null</b>.
+            </summary>
+      <remarks>
+        <para>
+            Strings encoded using Microsoft® JSON date-time format (for example, "/Date(1224043200000)/") are always 
+            recognized as date-time values regardless of a value of this property. The property defines additional 
+            formats to be used while parsing date-time values from strings in the following way:
+            </para>
+        <list type="bullet">
+          <item>
+            When <see cref="P:GroupDocs.Assembly.Data.JsonDataLoadOptions.ExactDateTimeParseFormats" /> is <b>null</b>, the ISO-8601 format and all date-time formats 
+            supported for the current, English USA, and English New Zealand cultures are used additionally in 
+            the mentioned order.
+            </item>
+          <item>
+            When <see cref="P:GroupDocs.Assembly.Data.JsonDataLoadOptions.ExactDateTimeParseFormats" /> contains strings, they are used as additional date-time
+            formats utilizing the current culture.
+            </item>
+          <item>
+            When <see cref="P:GroupDocs.Assembly.Data.JsonDataLoadOptions.ExactDateTimeParseFormats" /> is empty, no additional date-time formats are used.
+            </item>
+        </list>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.JsonDataLoadOptions.AlwaysGenerateRootObject">
+      <summary>
+            Gets or sets a flag indicating whether a generated data source will always contain an object for a JSON root
+            element. If a JSON root element contains a single complex property, such an object is not created by default.
+            </summary>
+      <remarks>
+            The default value is <b>false</b>.
+            </remarks>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.JsonDataSource">
+      <summary>
+            Provides access to data of a JSON file or stream to be used while assembling a document.
+            </summary>
+      <remarks>
+        <para>
+            To access data of the corresponding file or stream while assembling a document, pass an instance of this class as
+            a data source to one of <see cref="T:GroupDocs.Assembly.DocumentAssembler" />.AssembleDocument 
+            overloads.
+            </para>
+        <para>
+            In template documents, if a top-level JSON element is an array, a <see cref="T:GroupDocs.Assembly.Data.JsonDataSource" /> instance should be
+            treated in the same way as if it was a <see cref="T:System.Data.DataTable" /> instance. If a top-level JSON element 
+            is an object, a <see cref="T:GroupDocs.Assembly.Data.JsonDataSource" /> instance should be treated in the same way as if it was 
+            a <see cref="T:System.Data.DataRow" /> instance. For more information, see template syntax reference 
+            (https://docs.groupdocs.com/display/assemblynet/Template+Syntax+-+Part+1+of+2#TemplateSyntax-Part1of2-UsingDataSources).
+            </para>
+        <para>
+            In template documents, you can work with typed values of JSON elements. For convenience, the engine replaces the set 
+            of JSON simple types with the following one:
+            </para>
+        <list type="bullet">
+          <item>
+            <see cref="T:System.Nullable`1" />
+          </item>
+          <item>
+            <see cref="T:System.Nullable`1" />
+          </item>
+          <item>
+            <see cref="T:System.Nullable`1" />
+          </item>
+          <item>
+            <see cref="T:System.Nullable`1" />
+          </item>
+          <item>
+            <see cref="T:System.String" />
+          </item>
+        </list>
+        <para>
+            The engine automatically recognizes values of the extra types upon their JSON representations.
+            </para>
+        <para>
+            To override default behavior of JSON data loading, initialize and pass a <see cref="T:GroupDocs.Assembly.Data.JsonDataLoadOptions" /> instance
+            to a constructor of this class.
+            </para>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.JsonDataSource.#ctor(System.String)">
+      <summary>
+            Creates a new data source with data from a JSON file using default options for parsing JSON data.
+            </summary>
+      <param name="jsonPath">The path to the JSON file to be used as the data source.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.JsonDataSource.#ctor(System.String,GroupDocs.Assembly.Data.JsonDataLoadOptions)">
+      <summary>
+            Creates a new data source with data from a JSON file using the specified options for parsing JSON data.
+            </summary>
+      <param name="jsonPath">The path to the JSON file to be used as the data source.</param>
+      <param name="options">Options for parsing JSON data.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.JsonDataSource.#ctor(System.IO.Stream)">
+      <summary>
+            Creates a new data source with data from a JSON stream using default options for parsing JSON data.
+            </summary>
+      <param name="jsonStream">The stream of JSON data to be used as the data source.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.JsonDataSource.#ctor(System.IO.Stream,GroupDocs.Assembly.Data.JsonDataLoadOptions)">
+      <summary>
+            Creates a new data source with data from a JSON stream using the specified options for parsing JSON data.
+            </summary>
+      <param name="jsonStream">The stream of JSON data to be used as the data source.</param>
+      <param name="options">Options for parsing JSON data.</param>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.JsonSimpleValueParseMode">
+      <summary>
+            Specifies a mode for parsing JSON simple values (null, boolean, number, integer, and string) while loading JSON. 
+            Such a mode does not affect parsing of date-time values.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.Data.JsonSimpleValueParseMode.Loose">
+      <summary>
+            Specifies the mode where types of JSON simple values are determined upon parsing of their string representations.
+            For example, the type of 'prop' from the JSON snippet '{ prop: "123" }' is determined as integer in this mode.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.Data.JsonSimpleValueParseMode.Strict">
+      <summary>
+            Specifies the mode where types of JSON simple values are determined from JSON notation itself.
+            For example, the type of 'prop' from the JSON snippet '{ prop: "123" }' is determined as string in this mode.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.NamespaceDoc">
+      <summary>
+            Provides classes for accessing data of external documents to be used while assembling a document.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.XmlDataLoadOptions">
+      <summary>
+            Represents options for XML data loading.
+            </summary>
+      <remarks>
+            An instance of this class can be passed into constructors of <see cref="T:GroupDocs.Assembly.Data.XmlDataSource" />.
+            </remarks>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.XmlDataLoadOptions.#ctor">
+      <summary>
+            Initializes a new instance of this class with default options.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.Data.XmlDataLoadOptions.AlwaysGenerateRootObject">
+      <summary>
+            Gets or sets a flag indicating whether a generated data source will always contain an object for an XML root 
+            element. If an XML root element has no attributes and all its child elements have same names, such an object 
+            is not created by default.
+            </summary>
+      <remarks>
+            The default value is <b>false</b>.
+            </remarks>
+    </member>
+    <member name="T:GroupDocs.Assembly.Data.XmlDataSource">
+      <summary>
+            Provides access to data of an XML file or stream to be used while assembling a document.
+            </summary>
+      <remarks>
+        <para>
+            To access data of the corresponding file or stream while assembling a document, pass an instance of this class as
+            a data source to one of <see cref="T:GroupDocs.Assembly.DocumentAssembler" />.AssembleDocument 
+            overloads.
+            </para>
+        <para>
+            In template documents, if a top-level XML element contains only a list of elements of the same type, 
+            an <see cref="T:GroupDocs.Assembly.Data.XmlDataSource" /> instance should be treated in the same way as if it was 
+            a <see cref="T:System.Data.DataTable" /> instance. Otherwise, an <see cref="T:GroupDocs.Assembly.Data.XmlDataSource" /> instance should be 
+            treated in the same way as if it was a <see cref="T:System.Data.DataRow" /> instance. For more information, 
+            see template syntax reference 
+            (https://docs.groupdocs.com/display/assemblynet/Template+Syntax+-+Part+1+of+2#TemplateSyntax-Part1of2-UsingDataSources).
+            </para>
+        <para>
+            When XML Schema Definition is passed to a constructor of this class, data types of values of simple XML elements 
+            and attributes are determined according to the schema. So in template documents, you can work with typed values 
+            rather than just strings.
+            </para>
+        <para>
+            When XML Schema Definition is not passed to a constructor of this class, data types of values of simple XML elements 
+            and attributes are determined automatically upon their string representations. So in template documents, you can work 
+            with typed values in this case as well. The engine is capable to automatically recognize values of the following types:
+            </para>
+        <list type="bullet">
+          <item>
+            <see cref="T:System.Nullable`1" />
+          </item>
+          <item>
+            <see cref="T:System.Nullable`1" />
+          </item>
+          <item>
+            <see cref="T:System.Nullable`1" />
+          </item>
+          <item>
+            <see cref="T:System.Nullable`1" />
+          </item>
+          <item>
+            <see cref="T:System.String" />
+          </item>
+        </list>
+        <para>
+            Note that for automatic recognition of data types to work, string representations of values of simple XML elements 
+            and attributes should be formed using invariant culture settings.
+            </para>
+        <para>
+            To override default behavior of XML data loading, initialize and pass a <see cref="T:GroupDocs.Assembly.Data.XmlDataLoadOptions" />
+            instance to a constructor of this class.
+            </para>
+      </remarks>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.XmlDataSource.#ctor(System.String)">
+      <summary>
+            Creates a new data source with data from an XML file using default options for XML data loading.
+            </summary>
+      <param name="xmlPath">The path to the XML file to be used as the data source.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.XmlDataSource.#ctor(System.IO.Stream)">
+      <summary>
+            Creates a new data source with data from an XML stream using default options for XML data loading.
+            </summary>
+      <param name="xmlStream">The stream of XML data to be used as the data source.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.XmlDataSource.#ctor(System.String,System.String)">
+      <summary>
+            Creates a new data source with data from an XML file using an XML Schema Definition file. Default options
+            are used for XML data loading.
+            </summary>
+      <param name="xmlPath">The path to the XML file to be used as the data source.</param>
+      <param name="xmlSchemaPath">The path to the XML Schema Definition file that provides schema for the XML
+            file.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.XmlDataSource.#ctor(System.IO.Stream,System.IO.Stream)">
+      <summary>
+            Creates a new data source with data from an XML stream using an XML Schema Definition stream. Default options
+            are used for XML data loading.
+            </summary>
+      <param name="xmlStream">The stream of XML data to be used as the data source.</param>
+      <param name="xmlSchemaStream">The stream of XML Schema Definition that provides schema for the XML data.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.XmlDataSource.#ctor(System.String,GroupDocs.Assembly.Data.XmlDataLoadOptions)">
+      <summary>
+            Creates a new data source with data from an XML file using the specified options for XML data loading.
+            </summary>
+      <param name="xmlPath">The path to the XML file to be used as the data source.</param>
+      <param name="options">Options for XML data loading.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.XmlDataSource.#ctor(System.IO.Stream,GroupDocs.Assembly.Data.XmlDataLoadOptions)">
+      <summary>
+            Creates a new data source with data from an XML stream using the specified options for XML data loading.
+            </summary>
+      <param name="xmlStream">The stream of XML data to be used as the data source.</param>
+      <param name="options">Options for XML data loading.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.XmlDataSource.#ctor(System.String,System.String,GroupDocs.Assembly.Data.XmlDataLoadOptions)">
+      <summary>
+            Creates a new data source with data from an XML file using an XML Schema Definition file. The specified
+            options are used for XML data loading.
+            </summary>
+      <param name="xmlPath">The path to the XML file to be used as the data source.</param>
+      <param name="xmlSchemaPath">The path to the XML Schema Definition file that provides schema for the XML
+            file.</param>
+      <param name="options">Options for XML data loading.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Data.XmlDataSource.#ctor(System.IO.Stream,System.IO.Stream,GroupDocs.Assembly.Data.XmlDataLoadOptions)">
+      <summary>
+            Creates a new data source with data from an XML stream using an XML Schema Definition stream. The specified
+            options are used for XML data loading.
+            </summary>
+      <param name="xmlStream">The stream of XML data to be used as the data source.</param>
+      <param name="xmlSchemaStream">The stream of XML Schema Definition that provides schema for the XML data.</param>
+      <param name="options">Options for XML data loading.</param>
+    </member>
+    <member name="T:GroupDocs.Assembly.FileFormat">
+      <summary>
+            Specifies the format of a file.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Unspecified">
+      <summary>
+            Specifies an unset value. The default.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Doc">
+      <summary>
+            Specifies the Microsoft Word 97 - 2007 Binary Document format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Dot">
+      <summary>
+            Specifies the Microsoft Word 97 - 2007 Binary Template format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Docx">
+      <summary>
+            Specifies the Office Open XML WordprocessingML Document (macro-free) format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Docm">
+      <summary>
+            Specifies the Office Open XML WordprocessingML Macro-Enabled Document format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Dotx">
+      <summary>
+            Specifies the Office Open XML WordprocessingML Template (macro-free) format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Dotm">
+      <summary>
+            Specifies the Office Open XML WordprocessingML Macro-Enabled Template format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.FlatOpc">
+      <summary>
+            Specifies the Office Open XML WordprocessingML format stored in a flat XML file instead of a ZIP package.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.FlatOpcMacroEnabled">
+      <summary>
+            Specifies the Office Open XML WordprocessingML Macro-Enabled Document format stored in a flat XML file 
+            instead of a ZIP package.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.FlatOpcTemplate">
+      <summary>
+            Specifies the Office Open XML WordprocessingML Template (macro-free) format stored in a flat XML file 
+            instead of a ZIP package.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.FlatOpcTemplateMacroEnabled">
+      <summary>
+            Specifies the Office Open XML WordprocessingML Macro-Enabled Template format stored in a flat XML file 
+            instead of a ZIP package.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.WordML">
+      <summary>
+            Specifies the Microsoft Word 2003 WordprocessingML format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Odt">
+      <summary>
+            Specifies the ODF Text Document format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Ott">
+      <summary>
+            Specifies the ODF Text Document Template format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Xls">
+      <summary>
+            Specifies the Microsoft Excel 97 - 2007 Binary Workbook format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Xlsx">
+      <summary>
+            Specifies the Office Open XML SpreadsheetML Workbook (macro-free) format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Xlsm">
+      <summary>
+            Specifies the Office Open XML SpreadsheetML Macro-Enabled Workbook format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Xltx">
+      <summary>
+            Specifies the Office Open XML SpreadsheetML Template (macro-free) format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Xltm">
+      <summary>
+            Specifies the Office Open XML SpreadsheetML Macro-Enabled Template format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Xlam">
+      <summary>
+            Specifies the Office Open XML SpreadsheetML Macro-Enabled Add-in format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Xlsb">
+      <summary>
+            Specifies the Microsoft Excel 2007 Macro-Enabled Binary File format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.SpreadsheetML">
+      <summary>
+            Specifies the Microsoft Excel 2003 SpreadsheetML format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Ods">
+      <summary>
+            Specifies the ODF Spreadsheet format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Ppt">
+      <summary>
+            Specifies the Microsoft PowerPoint 97 - 2007 Binary Presentation format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Pps">
+      <summary>
+            Specifies the Microsoft PowerPoint 97 - 2007 Binary Slide Show format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Pptx">
+      <summary>
+            Specifies the Office Open XML PresentationML Presentation (macro-free) format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Pptm">
+      <summary>
+            Specifies the Office Open XML PresentationML Macro-Enabled Presentation format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Ppsx">
+      <summary>
+            Specifies the Office Open XML PresentationML Slide Show (macro-free) format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Ppsm">
+      <summary>
+            Specifies the Office Open XML PresentationML Macro-Enabled Slide Show format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Potx">
+      <summary>
+            Specifies the Office Open XML PresentationML Template (macro-free) format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Potm">
+      <summary>
+            Specifies the Office Open XML PresentationML Macro-Enabled Template format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Odp">
+      <summary>
+            Specifies the ODF Presentation format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.MsgAscii">
+      <summary>
+            Specifies the Microsoft Outlook Message (MSG) format using ASCII character encoding.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.MsgUnicode">
+      <summary>
+            Specifies the Microsoft Outlook Message (MSG) format using Unicode character encoding.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Eml">
+      <summary>
+            Specifies the MIME standard format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Emlx">
+      <summary>
+            Specifies the Apple Mail.app program file format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Rtf">
+      <summary>
+            Specifies the RTF format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Text">
+      <summary>
+            Specifies the plain text format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Xml">
+      <summary>
+            Specifies the XML format of a general form.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Xaml">
+      <summary>
+            Specifies the Extensible Application Markup Language (XAML) format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.XamlPackage">
+      <summary>
+            Specifies the Extensible Application Markup Language (XAML) package format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Html">
+      <summary>
+            Specifies the HTML format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Mhtml">
+      <summary>
+            Specifies the MHTML (Web archive) format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Xps">
+      <summary>
+            Specifies the XPS (XML Paper Specification) format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.OpenXps">
+      <summary>
+            Specifies the OpenXPS (Ecma-388) format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Pdf">
+      <summary>
+            Specifies the PDF (Adobe Portable Document) format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Epub">
+      <summary>
+            Specifies the IDPF EPUB format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Ps">
+      <summary>
+            Specifies the PS (PostScript) format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Pcl">
+      <summary>
+            Specifies the PCL (Printer Control Language) format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Svg">
+      <summary>
+            Specifies the SVG (Scalable Vector Graphics) format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Tiff">
+      <summary>
+            Specifies the TIFF format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Markdown">
+      <summary>
+            Specifies the Markdown format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Pot">
+      <summary>
+            Specifies the Microsoft PowerPoint 97 - 2007 Binary Template format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Otp">
+      <summary>
+            Specifies the ODF Presentation Template format.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.FileFormat.Xlt">
+      <summary>
+            Specifies the Microsoft Excel 97 - 2007 Binary Template format.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Assembly.DocumentAssembler">
+      <summary>
+            Provides routines to populate template documents with data and a set of settings to control these routines.
+            </summary>
+      <dev>
+            NOTE: If Aspose.Words' reporting engine physically moved to GroupDocs.Assembly, it would be possible to change 
+                  the design and use <see cref="T:Aspose.Reporting.ITemplateReader" /> and <see cref="T:Aspose.Reporting.IReportWriter" /> implementations here 
+                  directly rather than via facades.
+            </dev>
+    </member>
+    <member name="M:GroupDocs.Assembly.DocumentAssembler.#ctor">
+      <summary>
+            Initializes a new instance of this class.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Assembly.DocumentAssembler.AssembleDocument(System.String,System.String,GroupDocs.Assembly.DataSourceInfo[])">
+      <summary>
+            Loads a template document from the specified source path, populates the template document with data from 
+            the specified single or multiple sources, and stores the result document to the target path using default
+            <see cref="T:GroupDocs.Assembly.LoadSaveOptions" />.
+            </summary>
+      <param name="sourcePath">The path to a template document to be populated with data.</param>
+      <param name="targetPath">The path to a result document.</param>
+      <param name="dataSourceInfos">Provides information on data source objects to be used.</param>
+      <returns>
+            A flag indicating whether parsing of the template document was successful. The returned flag makes sense only if 
+            a value of the <see cref="P:GroupDocs.Assembly.DocumentAssembler.Options" /> property includes the <see cref="F:GroupDocs.Assembly.DocumentAssemblyOptions.InlineErrorMessages" />
+            option.
+            </returns>
+    </member>
+    <member name="M:GroupDocs.Assembly.DocumentAssembler.AssembleDocument(System.String,System.String,GroupDocs.Assembly.LoadSaveOptions,GroupDocs.Assembly.DataSourceInfo[])">
+      <summary>
+            Loads a template document from the specified source path, populates the template document with data from 
+            the specified single or multiple sources, and stores the result document to the target path using the given
+            <see cref="T:GroupDocs.Assembly.LoadSaveOptions" />.
+            </summary>
+      <param name="sourcePath">The path to a template document to be populated with data.</param>
+      <param name="targetPath">The path to a result document.</param>
+      <param name="loadSaveOptions">Specifies additional options for document loading and saving.</param>
+      <param name="dataSourceInfos">Provides information on data source objects to be used.</param>
+      <returns>
+            A flag indicating whether parsing of the template document was successful. The returned flag makes sense only if 
+            a value of the <see cref="P:GroupDocs.Assembly.DocumentAssembler.Options" /> property includes the <see cref="F:GroupDocs.Assembly.DocumentAssemblyOptions.InlineErrorMessages" />
+            option.
+            </returns>
+    </member>
+    <member name="M:GroupDocs.Assembly.DocumentAssembler.AssembleDocument(System.IO.Stream,System.IO.Stream,GroupDocs.Assembly.DataSourceInfo[])">
+      <summary>
+            Loads a template document from the specified source stream, populates the template document with data from 
+            the specified single or multiple sources, and stores the result document to the target stream using default
+            <see cref="T:GroupDocs.Assembly.LoadSaveOptions" />.
+            </summary>
+      <param name="sourceStream">The stream to read a template document from.</param>
+      <param name="targetStream">The stream to write a result document.</param>
+      <param name="dataSourceInfos">Provides information on data source objects to be used.</param>
+      <returns>
+            A flag indicating whether parsing of the template document was successful. The returned flag makes sense only if 
+            a value of the <see cref="P:GroupDocs.Assembly.DocumentAssembler.Options" /> property includes the <see cref="F:GroupDocs.Assembly.DocumentAssemblyOptions.InlineErrorMessages" />
+            option.
+            </returns>
+    </member>
+    <member name="M:GroupDocs.Assembly.DocumentAssembler.AssembleDocument(System.IO.Stream,System.IO.Stream,GroupDocs.Assembly.LoadSaveOptions,GroupDocs.Assembly.DataSourceInfo[])">
+      <summary>
+            Loads a template document from the specified source stream, populates the template document with data from 
+            the specified single or multiple sources, and stores the result document to the target stream using the given
+            <see cref="T:GroupDocs.Assembly.LoadSaveOptions" />.
+            </summary>
+      <param name="sourceStream">The stream to read a template document from.</param>
+      <param name="targetStream">The stream to write a result document.</param>
+      <param name="loadSaveOptions">Specifies additional options for document loading and saving.</param>
+      <param name="dataSourceInfos">Provides information on data source objects to be used.</param>
+      <returns>
+            A flag indicating whether parsing of the template document was successful. The returned flag makes sense only if 
+            a value of the <see cref="P:GroupDocs.Assembly.DocumentAssembler.Options" /> property includes the <see cref="F:GroupDocs.Assembly.DocumentAssemblyOptions.InlineErrorMessages" />
+            option.
+            </returns>
+    </member>
+    <member name="P:GroupDocs.Assembly.DocumentAssembler.Options">
+      <summary>
+            Gets or sets a set of flags controlling behavior of this <see cref="T:GroupDocs.Assembly.DocumentAssembler" /> instance 
+            while assembling a document.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.DocumentAssembler.BarcodeSettings">
+      <summary>
+            Gets a set of settings controlling barcode generation while assembling a document.
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.DocumentAssembler.KnownTypes">
+      <summary>
+            Gets an unordered set (that is, a collection of unique items) containing <see cref="T:System.Type" /> objects 
+            which fully or partially qualified names can be used within document templates processed by this 
+            assembler instance to invoke the corresponding types' static members, perform type casts, etc. 
+            </summary>
+    </member>
+    <member name="P:GroupDocs.Assembly.DocumentAssembler.UseReflectionOptimization">
+      <summary>
+            Gets or sets a value indicating whether invocations of custom type members performed via reflection API are 
+            optimized using dynamic class generation or not. The default value is true.
+            </summary>
+      <remarks>
+            There are some scenarios where it is preferrable to disable this optimization. For example, if you are dealing 
+            with small collections of data items all the time, then an overhead of dynamic class generation can be more 
+            noticeable than an overhead of direct reflection API calls.
+            </remarks>
+      <dev>
+            Normally, such settings should be located in configuration files, but it seems like there is no autoportable way 
+            to achieve this.
+            </dev>
+    </member>
+    <member name="T:GroupDocs.Assembly.DocumentAssemblyOptions">
+      <summary>
+            Specifies options controlling behavior of <see cref="T:GroupDocs.Assembly.DocumentAssembler" /> while assembling a document.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.DocumentAssemblyOptions.None">
+      <summary>
+            Specifies default options.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.DocumentAssemblyOptions.AllowMissingMembers">
+      <summary>
+            Specifies that missing object members should be treated as null literals by the assembler. This option 
+            affects only access to instance (that is, non-static) object members and extension methods. If this 
+            option is not set, the assembler throws an exception when encounters a missing object member.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.DocumentAssemblyOptions.UpdateFieldsAndFormulas">
+      <summary>
+            Specifies that fields of result Word Processing documents and formulas of result Spreadsheet documents 
+            should be updated by the assembler.
+            </summary>
+    </member>
+    <member name="F:GroupDocs.Assembly.DocumentAssemblyOptions.RemoveEmptyParagraphs">
+      <summary>
+            Specifies that the assembler should remove paragraphs becoming empty after template syntax tags are 
+            removed or replaced with empty values.
+            </summary>
+      <remarks>
+            At the moment, this option is supported only for templates of Word Processing, Presentation, and Email 
+            file formats.
+            </remarks>
+    </member>
+    <member name="F:GroupDocs.Assembly.DocumentAssemblyOptions.InlineErrorMessages">
+      <summary>
+            Specifies that the assembler should inline template syntax error messages into output documents. 
+            If this option is not set, the assembler throws an exception when encounters a syntax error.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Assembly.KnownTypeSet">
+      <summary>
+            Represents an unordered set (that is, a collection of unique items) containing <see cref="T:System.Type" /> objects 
+            which fully or partially qualified names can be used within document templates to invoke the corresponding 
+            types' static members, perform type casts, etc. 
+            </summary>
+      <dev>
+            This class is just a facade of <see cref="T:Aspose.Reporting.KnownTypeSetCore" />. Descriptional comments of these classes 
+            should be kept in sync.
+            </dev>
+    </member>
+    <member name="M:GroupDocs.Assembly.KnownTypeSet.Add(System.Type)">
+      <summary>
+        <para>Adds the specified <see cref="T:System.Type" /> object to the set. Throws <see cref="T:System.ArgumentException" /> in
+            the following cases:</para>
+        <para>- <paramref name="type" /> is null.</para>
+        <para>- <paramref name="type" /> represents a void type.</para>
+        <para>- <paramref name="type" /> represents an invisible type, i.e. a non-public type or a public nested type
+            which has a non-public outer type.</para>
+        <para>- <paramref name="type" /> represents a generic type.</para>
+        <para>- <paramref name="type" /> represents an array type.</para>
+        <para>- <paramref name="type" /> has been added to the set already.</para>
+      </summary>
+      <param name="type">A <see cref="T:System.Type" /> object to add.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.KnownTypeSet.Remove(System.Type)">
+      <summary>
+            Removes the specified <see cref="T:System.Type" /> object from the set. Throws <see cref="T:System.ArgumentException" /> if
+            <paramref name="type" /> is null.
+            </summary>
+      <param name="type">A <see cref="T:System.Type" /> object to remove.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.KnownTypeSet.Clear">
+      <summary>
+            Removes all items from the set.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Assembly.KnownTypeSet.GetEnumerator">
+      <summary>
+            Returns An <see cref="T:System.Collections.IEnumerator" /> object to iterate over items of the set.
+            </summary>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> object to iterate over items of the set.</returns>
+    </member>
+    <member name="P:GroupDocs.Assembly.KnownTypeSet.Count">
+      <summary>
+            Gets the count of items in the set.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Assembly.License">
+      <summary>
+            Provides methods to license the component.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Assembly.License.#ctor">
+      <summary>
+            Initializes a new instance of this class.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Assembly.License.SetLicense(System.String)">
+      <summary>
+            Licenses the component.
+            </summary>
+      <remarks>
+        <p>Tries to find the license in the following locations:</p>
+        <p>1. Explicit path.</p>
+        <p>2. The folder that contains the GroupDocs component assembly.</p>
+        <p>3. The folder that contains the client's calling assembly.</p>
+        <p>4. The folder that contains the entry (startup) assembly.</p>
+        <p>5. An embedded resource in the client's calling assembly.</p>
+      </remarks>
+      <param name="licenseName">Can be a full or short file name or name of an embedded resource.
+            Use an empty string to switch to evaluation mode.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.License.SetLicense(System.IO.Stream)">
+      <summary>
+            Licenses the component.
+            </summary>
+      <remarks>
+        <p>Use this method to load a license from a stream.</p>
+      </remarks>
+      <param name="stream">A stream that contains the license.</param>
+    </member>
+    <member name="P:GroupDocs.Assembly.License.IsLicensed">
+      <summary>
+            Returns true if a valid license has been applied; false if the component is running in evaluation mode.
+            </summary>
+    </member>
+    <member name="T:GroupDocs.Assembly.LoadSaveOptions">
+      <summary>
+            Specifies additional options for loading and saving of a document to be assembled.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Assembly.LoadSaveOptions.#ctor">
+      <summary>
+            Creates a new instance of this class without any properties specified.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Assembly.LoadSaveOptions.#ctor(GroupDocs.Assembly.FileFormat)">
+      <summary>
+            Creates a new instance of this class with the specified file format to save an assembled document to.
+            </summary>
+      <param name="saveFormat">A file format to save an assembled document to.</param>
+    </member>
+    <member name="P:GroupDocs.Assembly.LoadSaveOptions.SaveFormat">
+      <summary>
+            Gets or sets a file format to save an assembled document to. <see cref="F:GroupDocs.Assembly.FileFormat.Unspecified" /> is the default.
+            </summary>
+      <remarks>
+        <para>
+            When the value of this property is not specified, <see cref="T:GroupDocs.Assembly.DocumentAssembler" /> behaves as follows:
+            </para>
+        <para>
+            - When you specify a file path to save an assembled document, the save file format is determined upon file 
+            extension from the path.
+            </para>
+        <para>
+            - When you specify a stream to save an assembled document, the save file format remains the same as the file 
+            format of a loaded template document.
+            </para>
+        <para>
+            Beware that it is not always possible to save an assembled document to any file format using GroupDocs.Assembly. 
+            For example, it is impossible to save a document loaded from a Word Processing file format (such as DOCX) to 
+            a Spreadsheet file format (such as XLSX). For more information on possible combinations of load and save file 
+            formats supported by GroupDocs.Assembly, please check GroupDocs.Assembly online documentation.
+            </para>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Assembly.LoadSaveOptions.ResourceLoadBaseUri">
+      <summary>
+            Gets or sets a base URI to resolve external resource files' relative URIs to absolute ones while loading an HTML 
+            template document to be assembled and saved to a non-HTML format. The default value is an empty string.
+            </summary>
+      <remarks>
+        <para>
+            When loading an HTML document from a file, its containing folder is used as a base URI by default, which cannot 
+            happen when loading an HTML document from a stream. Set this property to specify a base URI when loading an HTML 
+            document from a stream or to override the default base URI when loading an HTML document from a file.
+            </para>
+        <para>
+            A value of this property is ignored in the following cases:
+            </para>
+        <list type="bullet">
+          <item>
+            An HTML document being loaded contains a BASE HTML element providing a base URI.
+            </item>
+          <item>
+            An HTML document being loaded is to be assembled and saved to HTML (external resource files are not loaded and
+            relative URIs are not changed then).
+            </item>
+        </list>
+      </remarks>
+    </member>
+    <member name="P:GroupDocs.Assembly.LoadSaveOptions.ResourceSaveFolder">
+      <summary>
+            Gets or sets a path to a folder to store external resource files while an assembled document loaded from a non-HTML 
+            format is being saved to HTML. The default value is an empty string.
+            </summary>
+      <remarks>
+        <para>
+            By default, when saving an assembled document to an HTML file, external resource files are stored to a folder
+            having the same name as the HTML file without extension plus the "_files" suffix. This folder is located in
+            the same folder as the HTML file. However, this cannot be done when saving an assembled document to an HTML stream.
+            Set this property to specify a path to a folder to store external resource files when saving an assembled document
+            to an HTML stream or to override the default folder when saving an assembled document to an HTML file.
+            </para>
+        <para>
+            A value of this property is ignored if an assembled document being saved to HTML was loaded from HTML as well
+            (external resource files are not stored and links to them are not changed then).
+            </para>
+      </remarks>
+    </member>
+    <member name="T:GroupDocs.Assembly.Metered">
+      <summary>
+            Provides methods to work with metered licensing.
+            </summary>
+      <example>
+            In this example, an attempt to set metered public and private keys is made:
+            <code>
+            [C#]
+            
+            Metered metered = new Metered();
+            metered.SetMeteredKey("PublicKey", "PrivateKey");
+            
+            [Visual Basic]
+            
+            Dim metered As Metered = New Metered
+            metered.SetMeteredKey("PublicKey", "PrivateKey")
+            </code></example>
+    </member>
+    <member name="M:GroupDocs.Assembly.Metered.#ctor">
+      <summary>
+            Creates a new instance of this class.
+            </summary>
+    </member>
+    <member name="M:GroupDocs.Assembly.Metered.SetMeteredKey(System.String,System.String)">
+      <summary>
+            Enables metered licensing for the component by specifying appropriate public and private metered keys.
+            </summary>
+      <param name="publicKey">The public metered key.</param>
+      <param name="privateKey">The private metered key.</param>
+    </member>
+    <member name="M:GroupDocs.Assembly.Metered.GetConsumptionQuantity">
+      <summary>
+            Returns the currently consumed number of megabytes.
+            </summary>
+      <returns>The currently consumed number of megabytes.</returns>
+    </member>
+    <member name="M:GroupDocs.Assembly.Metered.GetConsumptionCredit">
+      <summary>
+            Returns the currently consumed number of credits.
+            </summary>
+      <returns>The currently consumed number of credits.</returns>
+    </member>
+    <member name="T:GroupDocs.Assembly.NamespaceDoc">
+      <summary>
+        <p>Provides classes for generating documents in popular office file formats based upon template documents and data 
+            obtained from various sources including databases, XML, JSON, OData, objects of custom .NET 
+            types, and more.</p>
+      </summary>
+      <remarks>
+        <p>The central class of this namespace is <see cref="T:GroupDocs.Assembly.DocumentAssembler" />. This 
+            class incorporates a set of settings to control document generation and performs document generation through 
+            its <c>AssembleDocument</c> overloads.</p>
+      </remarks>
+    </member>
+  </members>
+</doc>
