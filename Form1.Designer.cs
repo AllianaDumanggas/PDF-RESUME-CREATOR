@@ -41,13 +41,13 @@ namespace PDF_RESUME_CREATOR
             this.datatxtbox.Name = "datatxtbox";
             this.datatxtbox.ReadOnly = true;
             this.datatxtbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.datatxtbox.Size = new System.Drawing.Size(353, 482);
+            this.datatxtbox.Size = new System.Drawing.Size(519, 325);
             this.datatxtbox.TabIndex = 1;
             this.datatxtbox.TextChanged += new System.EventHandler(this.datatxtbox_TextChanged);
             // 
             // readjdonfilebttn
             // 
-            this.readjdonfilebttn.Location = new System.Drawing.Point(443, 155);
+            this.readjdonfilebttn.Location = new System.Drawing.Point(106, 352);
             this.readjdonfilebttn.Name = "readjdonfilebttn";
             this.readjdonfilebttn.Size = new System.Drawing.Size(150, 34);
             this.readjdonfilebttn.TabIndex = 2;
@@ -57,7 +57,7 @@ namespace PDF_RESUME_CREATOR
             // 
             // pdfconvertbttn
             // 
-            this.pdfconvertbttn.Location = new System.Drawing.Point(443, 195);
+            this.pdfconvertbttn.Location = new System.Drawing.Point(262, 352);
             this.pdfconvertbttn.Name = "pdfconvertbttn";
             this.pdfconvertbttn.Size = new System.Drawing.Size(150, 34);
             this.pdfconvertbttn.TabIndex = 3;
@@ -69,7 +69,7 @@ namespace PDF_RESUME_CREATOR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 530);
+            this.ClientSize = new System.Drawing.Size(563, 444);
             this.Controls.Add(this.pdfconvertbttn);
             this.Controls.Add(this.readjdonfilebttn);
             this.Controls.Add(this.datatxtbox);
