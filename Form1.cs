@@ -1,6 +1,7 @@
 ﻿using Aspose.Words;
 using Aspose.Words.Reporting;
 using GroupDocs.Assembly;
+using Microsoft.Office.Interop.Word;
 using Newtonsoft.Json;
 using OpenXmlPowerTools;
 using SautinSoft.Document;
@@ -13,9 +14,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
+using Application = Microsoft.Office.Interop.Word.Application;
+using Document = Microsoft.Office.Interop.Word.Document;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 using Word = Microsoft.Office.Interop.Word;
 
@@ -116,7 +120,7 @@ namespace PDF_RESUME_CREATOR
             };
             string strresultsjson = JsonConvert.SerializeObject(mydata, Formatting.Indented);  
             datatxtbox.Text = strresultsjson;
-        }
+        } 
 
         private void pdfconvertbttn_Click(object sender, EventArgs e)
         {
@@ -146,11 +150,13 @@ namespace PDF_RESUME_CREATOR
             string References = info.Referenceee;
 
             var application = new Microsoft.Office.Interop.Word.Application();
-            var document = new Microsoft.Office.Interop.Word.Document();
+            var document = new Microsoft.Office.Interop.Word.Document(); 
+
             // adding the template
             document = application.Documents.Add(Template: @"C:\Users\universal\Documents\yeahtemplate.docx");
-            application.Visible = true;
+            application.Visible = false;
 
+            //calling the json data
             foreach (Microsoft.Office.Interop.Word.Field field in document.Fields)
             {
                 if (field.Code.Text.Contains("FIRST NAME"))
@@ -253,12 +259,24 @@ namespace PDF_RESUME_CREATOR
                     field.Select();
                     application.Selection.TypeText(References);
                 }
-            }
-            document.SaveAs(FileName: @"C:\Users\universal\Downloads\DUMANGGAS_ALLIANA.docx"); 
-            var doc = new Document(@"C:\Users\universal\Downloads\DUMANGGAS_ALLIANA.docx");
-            doc.Save("DUMANGGAS_ALLIANA.pdf");
-        }
+            }  
+            document.SaveAs(FileName: @"C:\Users\universal\Downloads\DUMANGGAS_ALLIANA_I..docx");
+            document.Close();
+            application.Quit();
 
+            //convert the docx file to pdf
+            MessageBox.Show("PLease wait the file to convert....");
+            Application app = new Application();
+            Document doc = app.Documents.Open(@"C:\Users\universal\Downloads\DUMANGGAS_ALLIANA_I..docx");
+            app.Visible = true;
+            doc.SaveAs(FileName: @"C:\Users\universal\source\repos\PDF RESUME CREATOR\PDF RESUME CREATOR\bin\Debug\DUMANGGAS_ALLIANA_I.pdf",WdSaveFormat.wdFormatPDF);
+            doc.Close();
+            app.Quit();
+            MessageBox.Show("File Conversion Completed");
+
+
+        }
+         
         private void closebttn_Click(object sender, EventArgs e)
         { 
           this.Close();
